@@ -51,13 +51,12 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
     <a class="navbar-brand" href="#">EcoEnergy</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Dispositivos</a></li>
+        <li class="nav-item"><a href="{%url 'device_list'%}" class="nav-link">Dispositivos</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Mediciones</a></li>
       </ul>
       <div>
@@ -86,7 +85,6 @@
         </div>
       </div>
 
-      <!-- Dispositivos por Zona -->
       <div class="col-md-4">
         <div class="card p-3 shadow-sm">
           <h6 class="text-uppercase fw-bold">Dispositivos por Zona</h6>
@@ -103,7 +101,6 @@
         </div>
       </div>
 
-      <!-- Alertas de la Semana -->
       <div class="col-md-4">
         <div class="card p-3 shadow-sm">
           <h6 class="text-uppercase fw-bold">Alertas de la Semana</h6>
@@ -118,7 +115,6 @@
     </div>
 
     <div class="row g-3 mb-4">
-      <!-- Últimas 10 Mediciones -->
       <div class="col-md-7">
         <div class="card p-3 shadow-sm">
           <div class="d-flex justify-content-between align-items-center">
@@ -148,7 +144,6 @@
         </div>
       </div>
 
-      <!-- Alertas recientes -->
       <div class="col-md-5">
         <div class="card p-3 shadow-sm">
           <div class="d-flex justify-content-between align-items-center">
@@ -178,7 +173,6 @@
       </div>
     </div>
 
-    <!-- Dispositivos con filtros -->
     <div class="card p-3 shadow-sm">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h6 class="text-uppercase fw-bold mb-0">Dispositivos</h6>

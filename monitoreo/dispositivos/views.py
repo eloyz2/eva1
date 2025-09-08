@@ -27,11 +27,22 @@ def dashboard(request):
 @login_required
 def device_list(request):
     category_filter = request.GET.get("category")
-    devices = Device.objects.filter(organization=request.user.organization)
+    zone_filter = request.GET.get("zone")
+
+    devices = Device.objects.all()   # 👈 quitamos organization
     if category_filter:
         devices = devices.filter(category_id=category_filter)
-    categories = Category.objects.filter(organization=request.user.organization)
-    return render(request, "devices/device_list.html", {"devices": devices, "categories": categories})
+    if zone_filter:
+        devices = devices.filter(zone_id=zone_filter)
+
+    categories = Category.objects.all()
+    zones = Zone.objects.all()
+
+    return render(request, "devices/device_list.html", {
+        "devices": devices,
+        "categories": categories,
+        "zones": zones,
+    })
 
 
 @login_required
